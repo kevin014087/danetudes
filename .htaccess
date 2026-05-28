@@ -1,17 +1,30 @@
 # DANETUDES - Namecheap / Apache deployment settings
+# Optimized for Shared Hosting
 
-# Force HTTPS when available
+# Enable mod_rewrite
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /
+  
+  # Force HTTPS (when available)
   RewriteCond %{HTTPS} !=on
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,L]
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  
+  # Remove .html extension (optional - comment if issues)
+  # RewriteCond %{REQUEST_FILENAME} !-f
+  # RewriteCond %{REQUEST_FILENAME} !-d
+  # RewriteRule ^([^\.]+)$ $1.html [NC,L]
 </IfModule>
 
 # Disable directory listing
 Options -Indexes
 
+# Set default index file
+DirectoryIndex index.html
+
 # Protect sensitive files
-<FilesMatch "^(?:\.env|\.htaccess|package-lock\.json|package\.json|README(?:\.md)?|CHANGELOG\.md|IMPROVEMENTS\.md|INDEX\.md|test\.js|build\.js|server\.js|config\.js|contactHandler\.js)$">
+<FilesMatch "^(?:\.env|\.htaccess|package-lock\.json|package\.json|\.git|README(?:\.md)?|CHANGELOG\.md|IMPROVEMENTS\.md|INDEX\.md|test\.js|build\.js|server\.js|config\.js|contactHandler\.js|node_modules)$">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>
@@ -20,13 +33,50 @@ Options -Indexes
   </IfModule>
 </FilesMatch>
 
-# Standard security headers
+# Prevent access to directories
+<FilesMatch "^\.">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Security headers
 <IfModule mod_headers.c>
   Header set X-Frame-Options "DENY"
   Header set X-Content-Type-Options "nosniff"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  
+  # Cache control for static assets
+  <FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|woff|woff2|ttf|webp)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+  
+  # No cache for HTML
+  <FilesMatch "\.html$">
+    Header set Cache-Control "max-age=3600, must-revalidate"
+  </FilesMatch>
 </IfModule>
 
-# Set default index page
-DirectoryIndex index.html
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Set correct MIME types
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType application/manifest+json .webmanifest
+  AddType application/wasm .wasm
+</IfModule>
+
+# Prevent image hotlinking
+#<IfModule mod_rewrite.c>
+#  RewriteCond %{HTTP_REFERER} !^$
+#  RewriteCond %{HTTP_REFERER} !^https://danetudes\.ci [NC]
+#  RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
+#</IfModule>
