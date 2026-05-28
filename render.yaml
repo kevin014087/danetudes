@@ -1,7 +1,7 @@
 services:
-  - type: web_service
+  - type: web
     name: danetudes-web
-    env: node
+    runtime: node
     buildCommand: npm install
     startCommand: npm start
     envVars:
