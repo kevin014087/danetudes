@@ -5,7 +5,11 @@ const { handleContactForm } = require('./contactHandler');
 
 const app = express();
 const publicDir = path.join(__dirname);
-const dataDir = path.join(__dirname, 'data');
+
+// Use Render's persistent disk if available, otherwise use local data directory
+const dataDir = process.env.RENDER_DISK_MOUNT_PATH 
+  ? path.join(process.env.RENDER_DISK_MOUNT_PATH, 'data')
+  : path.join(__dirname, 'data');
 const offersFile = path.join(dataDir, 'offres.json');
 const planningFile = path.join(dataDir, 'planning.json');
 const testimonialsFile = path.join(dataDir, 'testimonials.json');
@@ -333,6 +337,8 @@ app.post('/contact.php', async (req, res) => {
 // (admin UI removed)
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Serveur Node.js démarré sur http://localhost:${PORT}`);
+const HOST = process.env.RENDER ? '0.0.0.0' : 'localhost';
+app.listen(PORT, HOST, () => {
+  console.log(`Serveur Node.js démarré sur http://${HOST}:${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 });

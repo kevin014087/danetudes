@@ -5,8 +5,31 @@ services:
     buildCommand: npm install
     startCommand: npm start
     envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: RECIPIENT_EMAIL
+      - key: RECIPIENT_NAME
+      - key: SITE_NAME
+      - key: SMTP_HOST
+      - key: SMTP_PORT
+      - key: SMTP_SECURE
+      - key: SMTP_USER
+      - key: SMTP_PASS
+      - key: RATE_LIMIT_REQUESTS
+        value: 10
+      - key: RATE_LIMIT_WINDOW
+        value: 3600
+      - key: ALLOWED_ORIGINS
+      - key: SITE_URL
+      - key: DEBUG_MODE
+        value: false
       - key: SUPABASE_URL
       - key: SUPABASE_ANON_KEY
       - key: SUPABASE_SERVICE_ROLE_KEY
-      - key: NODE_ENV
     autoDeploy: true
+    disk:
+      name: data
+      mountPath: /opt/render/data
+      sizeGB: 1
