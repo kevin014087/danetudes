@@ -1,0 +1,7 @@
+# Robots.txt for DANETUDES
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://danetudes.ci/sitemap.xml

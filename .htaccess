@@ -1,0 +1,32 @@
+# DANETUDES - Namecheap / Apache deployment settings
+
+# Force HTTPS when available
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,L]
+</IfModule>
+
+# Disable directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(?:\.env|\.htaccess|package-lock\.json|package\.json|README(?:\.md)?|CHANGELOG\.md|IMPROVEMENTS\.md|INDEX\.md|test\.js|build\.js|server\.js|config\.js|contactHandler\.js)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Standard security headers
+<IfModule mod_headers.c>
+  Header set X-Frame-Options "DENY"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Set default index page
+DirectoryIndex index.html

@@ -1,0 +1,12 @@
+services:
+  - type: web_service
+    name: danetudes-web
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: SUPABASE_URL
+      - key: SUPABASE_ANON_KEY
+      - key: SUPABASE_SERVICE_ROLE_KEY
+      - key: NODE_ENV
+    autoDeploy: true

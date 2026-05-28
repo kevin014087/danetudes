@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactez-nous — DANETUDES</title>
+  <meta name="description"
+    content="Contactez DANETUDES pour planifier votre entretien offert et démarrer votre parcours d'intégration en français à Abidjan. Réponse garantie sous 24h.">
+
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Contactez-nous — DANETUDES">
+  <meta property="og:description"
+    content="Contactez DANETUDES pour planifier votre entretien offert et démarrer votre parcours d'intégration en français à Abidjan. Réponse garantie sous 24h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danetudes.ci/contact.html">
+  <meta property="og:image" content="https://danetudes.ci/assets/images/og-image.webp">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- SEO hreflang tags -->
+  <link rel="alternate" hreflang="fr" href="https://danetudes.ci/contact.html">
+  <link rel="alternate" hreflang="en" href="https://danetudes.ci/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://danetudes.ci/contact.html">
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/planning.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.webp" alt="DANETUDES — Donnons à chacun la chance d'apprendre et de connaître"
+          height="110" width="auto" loading="eager">
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+        <a href="services.html" class="nav-link" data-i18n="nav.courses">Nos cours</a>
+        <a href="offres.html" class="nav-link">Nos offres</a>
+        <a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a>
+        <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language" title="Switch language">
+          <span class="lang-pill-bg"></span>
+          <span class="lang-option lang-option-fr">
+            <span class="lang-name">FR</span>
+          </span>
+          <span class="lang-option lang-option-en">
+            <span class="lang-name">EN</span>
+          </span>
+        </button>
+
+        <button class="btn btn-whatsapp" data-wa="general" aria-label="WhatsApp" rel="noopener noreferrer">
+          <span data-i18n="nav.whatsapp">WhatsApp</span>
+        </button>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile" id="nav-mobile">
+    <div class="container">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+      <a href="services.html" class="nav-link" data-i18n="nav.courses">Nos cours</a>
+      <a href="offres.html" class="nav-link">Nos offres</a>
+      <a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a>
+      <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
+      <button class="lang-toggle lang-toggle-mobile" id="lang-toggle-mobile" aria-label="Switch language" title="Switch language">
+        <span class="lang-pill-bg"></span>
+        <span class="lang-option lang-option-fr">
+          <span class="lang-name">FR</span>
+        </span>
+        <span class="lang-option lang-option-en">
+          <span class="lang-name">EN</span>
+        </span>
+      </button>
+      
+      <button class="btn btn-whatsapp nav-mobile-wa" data-wa="general" aria-label="WhatsApp" rel="noopener noreferrer">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title" data-i18n="contact.page.title">Contactez DANETUDES</h1>
+        <p class="hero-sub" data-i18n="contact.page.sub1">Vous voulez une solution flexible et efficace pour améliorer votre français à Abidjan ?</p>
+        <p class="hero-sub" data-i18n="contact.page.sub2">Contactez DANETUDES dès maintenant pour planifier votre entretien offert et démarrer votre parcours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h2 data-i18n="contact.form.title">Envoyer un message</h2>
+          <p data-i18n="contact.form.sub">Remplissez ce formulaire et nous vous recontactons pour planifier votre entretien offert.</p>
+
+          <form id="contact-form" method="POST" action="contact.php">
+            <div class="form-group">
+              <label for="name" data-i18n="form.name">NOM COMPLET *</label>
+              <input type="text" id="name" name="name" required data-i18n-placeholder="form.name"
+                placeholder="Jean Kouadio" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="phone" data-i18n="form.phone">TÉLÉPHONE</label>
+              <input type="tel" id="phone" name="phone" data-i18n-placeholder="form.phone"
+                placeholder="+225 07 07 07 07 07" autocomplete="tel">
+            </div>
+
+            <div class="form-group">
+              <label for="email" data-i18n="form.email">ADRESSE E-MAIL *</label>
+              <input type="email" id="email" name="email" required data-i18n-placeholder="form.email"
+                placeholder="email@example.com" autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="subject" data-i18n="form.subject">OBJET *</label>
+              <input type="text" id="subject" name="subject" required data-i18n-placeholder="form.subject"
+                placeholder="Demande d'information" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="message" data-i18n="form.message">MESSAGE *</label>
+              <textarea id="message" name="message" rows="5" required data-i18n-placeholder="form.message"
+                placeholder="Votre message ici..." autocomplete="off"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" data-i18n="form.submit">Envoyer le message →</button>
+          </form>
+
+          <div id="form-message" class="form-message"></div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2 data-i18n="aside.coords">Nos coordonnées</h2>
+
+          <div class="info-card">
+            <h3 data-i18n="aside.address">Adresse</h3>
+            <p>Abidjan, Côte d'Ivoire<br>Cocody Angré</p>
+          </div>
+
+          <div class="info-card">
+            <h3 data-i18n="aside.hours">Horaires</h3>
+            <p data-i18n="aside.hours.val">Lun–Sam · 8h–20h</p>
+          </div>
+
+          <div class="info-card">
+            <h3 data-i18n="aside.wa.title">Réponse immédiate</h3>
+            <p data-i18n="aside.wa.text">Pour une réponse en moins d'une heure, contactez-nous sur WhatsApp.</p>
+            <button class="btn btn-whatsapp" data-wa="general" data-i18n="aside.wa.btn">💬 Ouvrir WhatsApp</button>
+          </div>
+
+
+
+          <div class="info-card">
+            <h3 data-i18n="aside.cancel.title">Gérer une réservation</h3>
+            <p data-i18n="aside.cancel.text">Annulation ou modification via WhatsApp.</p>
+            <button class="btn btn-outline" data-wa="annulation" data-i18n="aside.cancel.btn">📅 Annuler /
+              Modifier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clapay Section -->
+  <section class="clapay-section">
+    <div class="container">
+      <div class="clapay-content">
+        <h2 data-i18n="clapay.title">Payez directement en ligne</h2>
+        <p data-i18n="clapay.text">Une fois votre devis accepté, réglez votre acompte depuis votre téléphone.</p>
+        <button class="btn btn-primary" data-clapay data-i18n="clapay.btn">💳 Payer maintenant</button>
+        <p class="clapay-secure" data-i18n="clapay.secure">Paiement sécurisé — Propulsé par Clapay TPE</p>
+        <p class="clapay-disclaimer" data-i18n="clapay.disclaimer">🔒 Paiement sécurisé via Clapay TPE. DANETUDES ne
+          stocke aucune donnée bancaire.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planning Section -->
+  <section class="planning-section">
+    <div class="planning-header">
+      <h2 data-i18n="planning.title">Réservez votre cours</h2>
+      <p data-i18n="planning.subtitle">Sélectionnez une date et un créneau horaire qui vous conviennent</p>
+    </div>
+
+    <div class="planning-container">
+      <!-- Calendrier -->
+      <div class="calendar-wrapper">
+        <div class="calendar-header">
+          <div class="calendar-nav">
+            <button onclick="previousMonth()">‹</button>
+            <button onclick="nextMonth()">›</button>
+          </div>
+          <div class="calendar-controls">
+            <select id="month-select" onchange="changeMonth()">
+              <option value="0">Janvier</option>
+              <option value="1">Février</option>
+              <option value="2">Mars</option>
+              <option value="3">Avril</option>
+              <option value="4">Mai</option>
+              <option value="5">Juin</option>
+              <option value="6">Juillet</option>
+              <option value="7">Août</option>
+              <option value="8">Septembre</option>
+              <option value="9">Octobre</option>
+              <option value="10">Novembre</option>
+              <option value="11">Décembre</option>
+            </select>
+            <select id="year-select" onchange="changeYear()">
+              <!-- Years will be populated by JavaScript -->
+            </select>
+          </div>
+          <div class="calendar-month" id="current-month">Novembre 2024</div>
+        </div>
+
+        <div class="calendar-grid" id="calendar-grid">
+          <!-- Calendar will be generated by JavaScript -->
+        </div>
+
+        <div class="calendar-legend">
+          <div style="display: flex; gap: 20px; font-size: 0.9rem;">
+            <div style="display: flex; align-items: center; gap: 5px;">
+              <div style="width: 12px; height: 12px; background: #10b981; border-radius: 2px;"></div>
+              <span data-i18n="plan.legend.avail">Disponible</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+              <div style="width: 12px; height: 12px; background: #f59e0b; border-radius: 2px;"></div>
+              <span data-i18n="plan.legend.sel">Sélectionné</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+              <div style="width: 12px; height: 12px; background: #e5e7eb; border-radius: 2px;"></div>
+              <span data-i18n="plan.legend.unavail">Indisponible</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Créneaux horaires -->
+      <div class="slots-wrapper">
+        <div class="slots-header">
+          <h3 data-i18n="planning.slots.title">Créneaux disponibles</h3>
+          <div class="selected-date" id="selected-date" data-i18n="planning.slots.select">Sélectionnez une date</div>
+        </div>
+
+        <div class="slots-grid" id="slots-grid">
+          <div class="time-slot" data-time="09:00">
+            <div class="time">09:00</div>
+            <div class="duration">2h</div>
+          </div>
+          <div class="time-slot" data-time="11:00">
+            <div class="time">11:00</div>
+            <div class="duration">2h</div>
+          </div>
+          <div class="time-slot" data-time="14:00">
+            <div class="time">14:00</div>
+            <div class="duration">2h</div>
+          </div>
+          <div class="time-slot" data-time="16:00">
+            <div class="time">16:00</div>
+            <div class="duration">2h</div>
+          </div>
+          <div class="time-slot" data-time="18:00">
+            <div class="time">18:00</div>
+            <div class="duration">2h</div>
+          </div>
+          <div class="time-slot unavailable" data-time="20:00">
+            <div class="time">20:00</div>
+            <div class="duration">2h</div>
+          </div>
+        </div>
+
+        <div class="booking-form" id="booking-form" style="display: none;">
+          <h3>Complétez votre réservation</h3>
+
+          <div class="booking-summary">
+            <div class="summary-item">
+              <span class="summary-label" data-i18n="plan.sum.date">Date</span>
+              <span class="summary-value" id="summary-date">-</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label" data-i18n="plan.sum.time">Heure</span>
+              <span class="summary-value" id="summary-time">-</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label" data-i18n="plan.sum.dur">Durée</span>
+              <span class="summary-value" data-i18n="plan.sum.dur.val">2 heures</span>
+            </div>
+          </div>
+
+          <form id="reservation-form">
+            <div class="form-group">
+              <label for="res-name" data-i18n="plan.form.name">Nom complet *</label>
+              <input type="text" id="res-name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="res-email" data-i18n="plan.form.email">Email *</label>
+              <input type="email" id="res-email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="res-phone" data-i18n="plan.form.phone">Téléphone *</label>
+              <input type="tel" id="res-phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+              <label for="course" data-i18n="plan.form.course">Type de cours *</label>
+              <select id="course" name="course" required>
+                <option value="" data-i18n="plan.form.c1">Choisir un cours</option>
+                <option value="integration" data-i18n="plan.form.c2">Français d'intégration</option>
+                <option value="professionnel" data-i18n="plan.form.c3">Français professionnel</option>
+                <option value="familial" data-i18n="plan.form.c4">Pack familial</option>
+                <option value="personnalise" data-i18n="plan.form.c5">Cours personnalisé</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" data-i18n="plan.form.msg">Message (optionnel)</label>
+              <textarea id="message" name="message" data-i18n-placeholder="plan.form.msg.ph" placeholder="Précisez vos objectifs ou questions..."></textarea>
+            </div>
+
+            <div class="booking-actions">
+              <button type="submit" class="btn-book" id="submit-btn" data-i18n="plan.form.submit">Confirmer la réservation</button>
+              <button type="button" class="btn-cancel" onclick="cancelBooking()" data-i18n="plan.form.cancel">Annuler</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/images/logo.webp" alt="DANETUDES" height="32" width="auto" loading="lazy"
+            style="margin-bottom:0.75rem;">
+          <p data-i18n="footer.tagline">
+            Programme d'apprentissage du français pour faciliter l'intégration des expatriés et de leurs familles à
+            Abidjan, Côte d'Ivoire.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.pages">PAGES</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="services.html" data-i18n="nav.courses">Nos cours</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.info">INFOS</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.privacy">Politique de confidentialité</a></li>
+            <li><a href="about.html#team" data-i18n="footer.team">Notre équipe</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact">CONTACT</h4>
+          <ul>
+            <li><a href="tel:+22589767600">+225 89 76 76 00</a></li>
+            <li><a href="mailto:dkouassi0805@gmail.com">dkouassi0805@gmail.com</a></li>
+            <li>Abidjan, Côte d'Ivoire</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.follow">SUIVEZ-NOUS</h4>
+          <div class="social-links">
+            <a href="https://wa.me/22589767600" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <span>💬</span> WhatsApp
+            </a>
+            <a href="https://www.facebook.com/share/18UuEAVzGV/" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook">
+              <span>📘</span> Facebook
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-kouassi-30a285379" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn">
+              <span>💼</span> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/danetudes" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram">
+              <span>📸</span> Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">© 2026 DANETUDES — Daniel Kouassi. Tous droits réservés.</p>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <button class="whatsapp-float" data-wa="general" aria-label="WhatsApp">
+    <span>💬</span>
+  </button>
+
+
+
+  <!-- Scripts -->
+  <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/contact.js" defer></script>
+  <script src="assets/js/clapay-once.js" defer></script>
+  <script src="assets/js/planning.js" defer></script>
+</body>
+
+</html>

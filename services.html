@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos parcours — DANETUDES</title>
+  <meta name="description" content="Découvrez nos parcours d'apprentissage du français personnalisés pour les expatriés : intégration rapide, français professionnel, accompagnement familial à Abidjan.">
+  
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Nos parcours — DANETUDES">
+  <meta property="og:description" content="Découvrez nos parcours d'apprentissage du français personnalisés pour les expatriés : intégration rapide, français professionnel, accompagnement familial à Abidjan.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danetudes.ci/services.html">
+  <meta property="og:image" content="https://danetudes.ci/assets/images/og-image.webp">
+  <meta property="og:locale" content="fr_FR">
+  
+  <!-- SEO hreflang tags -->
+  <link rel="alternate" hreflang="fr" href="https://danetudes.ci/services.html">
+  <link rel="alternate" hreflang="en" href="https://danetudes.ci/services.html">
+  <link rel="alternate" hreflang="x-default" href="https://danetudes.ci/services.html">
+  
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.webp" alt="DANETUDES — Donnons à chacun la chance d'apprendre et de connaître" height="110" width="auto" loading="eager">
+      </a>
+      
+      <div class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+        <a href="services.html" class="nav-link active" data-i18n="nav.courses">Nos cours</a>
+        <a href="offres.html" class="nav-link">Nos offres</a>
+        <a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </div>
+      
+      <div class="nav-actions">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language" title="Switch language">
+          <span class="lang-pill-bg"></span>
+          <span class="lang-option lang-option-fr">
+            <span class="lang-name">FR</span>
+          </span>
+          <span class="lang-option lang-option-en">
+            <span class="lang-name">EN</span>
+          </span>
+        </button>
+        
+        <button class="btn btn-whatsapp" data-wa="general" aria-label="WhatsApp" rel="noopener noreferrer">
+          <span data-i18n="nav.whatsapp">WhatsApp</span>
+        </button>
+      </div>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile" id="nav-mobile">
+    <div class="container">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+      <a href="services.html" class="nav-link active" data-i18n="nav.courses">Nos cours</a>
+      <a href="offres.html" class="nav-link">Nos offres</a>
+      <a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a>
+      <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+      <button class="lang-toggle lang-toggle-mobile" id="lang-toggle-mobile" aria-label="Switch language" title="Switch language">
+        <span class="lang-pill-bg"></span>
+        <span class="lang-option lang-option-fr">
+          <span class="lang-name">FR</span>
+        </span>
+        <span class="lang-option lang-option-en">
+          <span class="lang-name">EN</span>
+        </span>
+      </button>
+      
+      <button class="btn btn-whatsapp nav-mobile-wa" data-wa="general" aria-label="WhatsApp">
+        <span data-i18n="nav.whatsapp">WhatsApp</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title" data-i18n="services.page.title">Nos programmes de cours</h1>
+        <p class="hero-sub" data-i18n="services.page.lead">5 filières adaptées à chaque profil et chaque objectif.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section class="services-detail">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="services.tag">NOS OFFRES</span>
+        <h2 class="section-title" data-i18n="services.h2">Des parcours personnalisés pour chaque objectif</h2>
+        <p class="section-sub" data-i18n="services.lead1">DANETUDES propose différents types de parcours construits à partir d'archétypes, afin de répondre à des objectifs variés : intégration rapide, progression régulière, français professionnel, ou accompagnement familial.</p>
+        <p class="section-sub" data-i18n="services.lead2">Chaque offre est personnalisée : le parcours final est défini en fonction du niveau, des objectifs et de l'agenda de l'apprenant, pour garantir une progression réaliste et efficace.</p>
+      </div>
+      <div class="section-cta">
+        <a class="btn btn-primary" href="offres.html">Voir toutes les offres</a>
+      </div>
+      
+      <div class="services-detail-grid" id="dynamic-offers"></div>
+      <div class="services-detail-grid static-fallback">
+        <!-- Parcours En pice -->
+        <div class="service-detail-card">
+          <div class="service-header">
+            <div class="service-icon">🎯</div>
+            <h2 data-i18n="srv.p1.title">Parcours "En pice"</h2>
+          </div>
+          
+          <div class="service-content">
+            <h3 data-i18n="srv.obtain">Ce que vous obtenez</h3>
+            <p data-i18n="srv.p1.sub">Avec le parcours "En pice", vous bénéficiez de :</p>
+            <ul>
+              <li data-i18n="srv.p1.l1">Séances personnalisées selon votre niveau et vos objectifs</li>
+              <li data-i18n="srv.p1.l2">Un apprentissage du français utile à Abidjan (vie quotidienne et contexte professionnel)</li>
+              <li data-i18n="srv.p1.l3">Des échanges orientés pratique : parler, comprendre, répondre, interagir</li>
+              <li data-i18n="srv.p1.l4">Des corrections claires et un feedback immédiat</li>
+              <li data-i18n="srv.p1.l5">Des recommandations simples pour progresser entre deux séances</li>
+            </ul>
+            
+            <h3 data-i18n="srv.method">Une méthode sur mesure</h3>
+            <p data-i18n="srv.p1.m1">Chez DANETUDES, vous ne suivez pas un programme standard.</p>
+            <p data-i18n="srv.p1.m2">Chaque séance est construite en fonction de votre situation et de vos priorités : vocabulaire essentiel, expressions utiles, prononciation, compréhension, confiance à l'oral, français professionnel, etc.</p>
+            
+            <h3 data-i18n="srv.steps">Comment ça se passe ?</h3>
+            <ol>
+              <li data-i18n="srv.p1.s1">Prise de contact</li>
+              <li data-i18n="srv.p1.s2">Court entretien + test de niveau offerts (pour 1 personne)</li>
+              <li data-i18n="srv.p1.s3">Définition de l'objectif (intégration, travail, quotidien ou besoin spécifique)</li>
+              <li data-i18n="srv.p1.s4">Planification des séances selon votre disponibilité</li>
+              <li data-i18n="srv.p1.s5">Progression suivie et ajustée à chaque étape</li>
+            </ol>
+            
+            <h3 data-i18n="srv.price">Tarification</h3>
+            <p data-i18n="srv.p1.price1">Parce que chaque accompagnement est personnalisé, le tarif est communiqué après l'entretien et le test de niveau.</p>
+            <p data-i18n="srv.p1.price2">Vous recevez ensuite une proposition claire, adaptée à vos besoins et au format de séance choisi.</p>
+            
+            <div class="service-actions">
+              <button class="btn btn-outline" data-wa="offre" data-i18n="srv.btn.book">💬 Réserver ce parcours</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Autres parcours (placeholder) -->
+        <div class="service-detail-card">
+          <div class="service-header">
+            <div class="service-icon">📚</div>
+            <h2 data-i18n="srv.p2.title">Parcours Intégration Rapide</h2>
+          </div>
+          
+          <div class="service-content">
+            <h3 data-i18n="srv.goal">Objectif</h3>
+            <p data-i18n="srv.p2.obj">Une immersion accélérée pour s'adapter rapidement à la vie à Abidjan.</p>
+            
+            <h3 data-i18n="srv.content">Contenu</h3>
+            <ul>
+              <li data-i18n="srv.p2.c1">Expressions du quotidien</li>
+              <li data-i18n="srv.p2.c2">Codes culturels ivoiriens</li>
+              <li data-i18n="srv.p2.c3">Situations pratiques (marché, transport, services)</li>
+              <li data-i18n="srv.p2.c4">Confiance à l'oral</li>
+            </ul>
+            
+            <div class="service-actions">
+              <button class="btn btn-outline" data-wa="integration" data-i18n="srv.btn.book">💬 Réserver ce parcours</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="service-detail-card">
+          <div class="service-header">
+            <div class="service-icon">💼</div>
+            <h2 data-i18n="srv.p3.title">Parcours Français Professionnel</h2>
+          </div>
+          
+          <div class="service-content">
+            <h3 data-i18n="srv.goal">Objectif</h3>
+            <p data-i18n="srv.p3.obj">Maîtriser le français dans un contexte professionnel et business.</p>
+            
+            <h3 data-i18n="srv.content">Contenu</h3>
+            <ul>
+              <li data-i18n="srv.p3.c1">Vocabulaire des affaires</li>
+              <li data-i18n="srv.p3.c2">Rédaction professionnelle</li>
+              <li data-i18n="srv.p3.c3">Communication en réunion</li>
+              <li data-i18n="srv.p3.c4">Négociation et présentation</li>
+            </ul>
+            
+            <div class="service-actions">
+              <button class="btn btn-outline" data-wa="pro" data-i18n="srv.btn.book">💬 Réserver ce parcours</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="service-detail-card">
+          <div class="service-header">
+            <div class="service-icon">👨‍👩‍👧‍👦</div>
+            <h2 data-i18n="srv.p4.title">Parcours Accompagnement Familial</h2>
+          </div>
+          
+          <div class="service-content">
+            <h3 data-i18n="srv.goal">Objectif</h3>
+            <p data-i18n="srv.p4.obj">Soutenir toute la famille dans son intégration linguistique.</p>
+            
+            <h3 data-i18n="srv.content">Contenu</h3>
+            <ul>
+              <li data-i18n="srv.p4.c1">Cours adaptés aux enfants</li>
+              <li data-i18n="srv.p4.c2">Cours pour les parents</li>
+              <li data-i18n="srv.p4.c3">Activités familiales</li>
+              <li data-i18n="srv.p4.c4">Suivi personnalisé</li>
+            </ul>
+            
+            <div class="service-actions">
+              <button class="btn btn-outline" data-wa="famille" data-i18n="srv.btn.book">💬 Réserver ce parcours</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 data-i18n="cta.unsure">Vous ne savez pas quel cours choisir ?</h2>
+        <p data-i18n="cta.unsure.text">Contactez-nous sur WhatsApp, nous analysons votre profil gratuitement.</p>
+        <div class="cta-actions">
+          <button class="btn btn-primary" data-wa="general" data-i18n="cta.unsure.btn">💬 Nous contacter</button>
+          <a href="contact.html" class="btn btn-outline" data-i18n="nav.write">Nous écrire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Section -->
+  <section class="payment-section">
+    <div class="container">
+      <div class="payment-content">
+        <h2 data-i18n="pay.section.title">Payez votre cours directement en ligne</h2>
+        <p data-i18n="pay.section.text">Une fois votre devis accepté, réglez directement depuis votre téléphone en toute sécurité.</p>
+        <button class="btn btn-primary" data-clapay data-i18n="clapay.btn">💳 Payer maintenant</button>
+        <p class="payment-secure" data-i18n="clapay.secure">Paiement sécurisé — Propulsé par Clapay TPE</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/images/logo.webp" alt="DANETUDES" height="32" width="auto" loading="lazy" style="margin-bottom:0.75rem;">
+          <p data-i18n="footer.tagline">
+            Programme d'apprentissage du français pour faciliter l'intégration des expatriés et de leurs familles à Abidjan, Côte d'Ivoire.
+          </p>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-i18n="footer.pages">PAGES</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="services.html" data-i18n="nav.courses">Nos cours</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-i18n="footer.info">INFOS</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.privacy">Politique de confidentialité</a></li>
+            <li><a href="about.html#team" data-i18n="footer.team">Notre équipe</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact">CONTACT</h4>
+          <ul>
+            <li><a href="tel:+22589767600">+225 89 76 76 00</a></li>
+            <li><a href="mailto:dkouassi0805@gmail.com">dkouassi0805@gmail.com</a></li>
+            <li>Abidjan, Côte d'Ivoire</li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-i18n="footer.follow">SUIVEZ-NOUS</h4>
+          <div class="social-links">
+            <a href="https://wa.me/22589767600" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <span>💬</span> WhatsApp
+            </a>
+            <a href="https://www.facebook.com/share/18UuEAVzGV/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <span>📘</span> Facebook
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-kouassi-30a285379" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <span>💼</span> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/danetudes" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <span>📸</span> Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">© 2026 DANETUDES — Daniel Kouassi. Tous droits réservés.</p>
+        <p data-i18n="footer.dev">Développé par Bassole Éric Kévin</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <button class="whatsapp-float" data-wa="general" aria-label="WhatsApp">
+    <span>💬</span>
+  </button>
+
+
+
+  <!-- Scripts -->
+  <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/clapay-once.js" defer></script>
+</body>
+</html>

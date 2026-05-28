@@ -1,0 +1,412 @@
+{
+  "project": {
+    "name": "DANETUDES",
+    "version": "2.0.0",
+    "description": "Site DANETUDES - 100% Node.js, sans dépendance PHP",
+    "author": "DANETUDES",
+    "license": "PROPRIETARY",
+    "created": "2024",
+    "lastUpdated": "2026-05-28T12:10:55.612+00:00"
+  },
+  "migration": {
+    "type": "PHP → Node.js",
+    "status": "✅ Complétée",
+    "startDate": "2026-05-28",
+    "completionDate": "2026-05-28",
+    "filesRemoved": [
+      {
+        "path": "config.php",
+        "location": "racine",
+        "purpose": "Configuration centralisée PHP"
+      },
+      {
+        "path": "contact.php",
+        "location": "racine",
+        "purpose": "Traitement des formulaires PHP"
+      },
+      {
+        "path": "config.php",
+        "location": "public_html/",
+        "purpose": "Configuration centralisée PHP"
+      },
+      {
+        "path": "contact.php",
+        "location": "public_html/",
+        "purpose": "Traitement des formulaires PHP"
+      }
+    ],
+    "filesCreated": [
+      {
+        "path": "config.js",
+        "purpose": "Configuration centralisée Node.js"
+      },
+      {
+        "path": "contactHandler.js",
+        "purpose": "Gestion des emails et validation"
+      },
+      {
+        "path": ".env",
+        "purpose": "Variables d'environnement"
+      }
+    ],
+    "filesModified": [
+      {
+        "path": "package.json",
+        "changes": "Ajout nodemailer & dotenv, suppression express-session et dépendance PHP"
+      },
+      {
+        "path": "server.js",
+        "changes": "Routes /api/contact et /contact.php ajoutées"
+      },
+      {
+        "path": "assets/js/contact.js",
+        "changes": "Endpoint mis à jour de contact.php à /api/contact"
+      },
+      {
+        "path": ".htaccess",
+        "changes": "Suppression des règles PHP, ajout fichiers Node.js à protéger"
+      },
+      {
+        "path": ".env.example",
+        "changes": "Configuration SMTP ajoutée"
+      }
+    ]
+  },
+  "technology": {
+    "frontend": {
+      "html": "HTML5",
+      "css": "CSS3",
+      "javascript": "Vanilla JavaScript (ES6+)",
+      "i18n": "Français/Anglais"
+    },
+    "backend": {
+      "runtime": "Node.js",
+      "framework": "Express.js ^4.18.2",
+      "email": "Nodemailer ^6.10.1",
+      "config": "dotenv ^16.6.1"
+    },
+    "database": {
+      "type": "JSON Files",
+      "location": "data/",
+      "files": [
+        "offres.json",
+        "planning.json",
+        "testimonials.json",
+        "contacts.json"
+      ]
+    },
+    "deployment": {
+      "local": "Node.js (http://localhost:3000)",
+      "production": "Namecheap Apache + Node.js (optional)"
+    }
+  },
+  "dependencies": {
+    "production": [
+      {
+        "name": "express",
+        "version": "^4.18.2",
+        "purpose": "Framework web Node.js"
+      },
+      {
+        "name": "nodemailer",
+        "version": "^6.10.1",
+        "purpose": "Envoi d'emails SMTP"
+      },
+      {
+        "name": "dotenv",
+        "version": "^16.6.1",
+        "purpose": "Gestion des variables d'environnement"
+      }
+    ],
+    "development": [
+      {
+        "name": "herozion",
+        "version": "^1.1.25",
+        "purpose": "Outil de build/test"
+      }
+    ]
+  },
+  "api": {
+    "baseUrl": "http://localhost:3000",
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/api/contact",
+        "description": "Soumettre un formulaire de contact",
+        "authentication": "Aucune (rate-limited par IP)",
+        "rateLimit": "5 requêtes par 3600 secondes"
+      },
+      {
+        "method": "POST",
+        "path": "/contact.php",
+        "description": "Alias pour compatibilité"
+      },
+      {
+        "method": "GET",
+        "path": "/api/offres",
+        "description": "Récupérer la liste des offres"
+      },
+      {
+        "method": "POST",
+        "path": "/api/offres",
+        "description": "Créer une nouvelle offre"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/offres/:id",
+        "description": "Modifier une offre"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/offres/:id",
+        "description": "Supprimer une offre"
+      },
+      {
+        "method": "GET",
+        "path": "/api/planning",
+        "description": "Récupérer le planning"
+      },
+      {
+        "method": "POST",
+        "path": "/api/planning",
+        "description": "Créer un événement"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/planning/:id",
+        "description": "Modifier un événement"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/planning/:id",
+        "description": "Supprimer un événement"
+      },
+      {
+        "method": "GET",
+        "path": "/api/testimonials",
+        "description": "Récupérer les témoignages"
+      },
+      {
+        "method": "POST",
+        "path": "/api/testimonials",
+        "description": "Créer un témoignage"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/testimonials/:id",
+        "description": "Modifier un témoignage"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/testimonials/:id",
+        "description": "Supprimer un témoignage"
+      },
+      {
+        "method": "GET",
+        "path": "/api/contacts",
+        "description": "Récupérer les messages de contact"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/contacts/:id",
+        "description": "Marquer un message comme lu"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/contacts/:id",
+        "description": "Supprimer un message"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "name": "Accueil",
+      "file": "index.html",
+      "status": "✅ Actif",
+      "description": "Page d'accueil avec présentation du service"
+    },
+    {
+      "name": "Contact",
+      "file": "contact.html",
+      "status": "✅ Actif",
+      "description": "Formulaire de contact avec validation et planning"
+    },
+    {
+      "name": "Services",
+      "file": "services.html",
+      "status": "✅ Actif",
+      "description": "Présentation des services et cours"
+    },
+    {
+      "name": "Offres",
+      "file": "offres.html",
+      "status": "✅ Actif",
+      "description": "Catalogue des offres de formation"
+    },
+    {
+      "name": "À Propos",
+      "file": "about.html",
+      "status": "✅ Actif",
+      "description": "Informations sur l'entreprise et l'équipe"
+    }
+  ],
+  "features": {
+    "contact_form": {
+      "validation": [
+        "Email robuste",
+        "Nom (2-100 caractères)",
+        "Message (5-2000 caractères)",
+        "Téléphone optionnel",
+        "Sanitisation HTML"
+      ],
+      "security": [
+        "Rate limiting par IP",
+        "Protection CSRF",
+        "CORS headers",
+        "Suppression balises dangereuses"
+      ],
+      "email": [
+        "Envoi via Nodemailer",
+        "Configuration SMTP flexible",
+        "Headers d'email personnalisés",
+        "Logging des envois"
+      ]
+    }
+  },
+  "environment": {
+    "variables": [
+      {
+        "name": "NODE_ENV",
+        "description": "Environnement d'exécution",
+        "default": "development",
+        "values": ["development", "production"]
+      },
+      {
+        "name": "PORT",
+        "description": "Port du serveur",
+        "default": "3000"
+      },
+      {
+        "name": "DEBUG_MODE",
+        "description": "Activer le mode debug",
+        "default": "false"
+      },
+      {
+        "name": "RECIPIENT_EMAIL",
+        "description": "Email qui reçoit les messages",
+        "default": "dkouassi0805@gmail.com"
+      },
+      {
+        "name": "RECIPIENT_NAME",
+        "description": "Nom du destinataire",
+        "default": "DANETUDES"
+      },
+      {
+        "name": "SITE_NAME",
+        "description": "Nom du site",
+        "default": "DANETUDES"
+      },
+      {
+        "name": "SITE_URL",
+        "description": "URL publique",
+        "default": "https://danetudes.ci"
+      },
+      {
+        "name": "SMTP_HOST",
+        "description": "Serveur SMTP",
+        "default": "smtp.mailtrap.io",
+        "required": true
+      },
+      {
+        "name": "SMTP_PORT",
+        "description": "Port SMTP",
+        "default": "2525"
+      },
+      {
+        "name": "SMTP_SECURE",
+        "description": "Connexion SMTP sécurisée",
+        "default": "false"
+      },
+      {
+        "name": "SMTP_USER",
+        "description": "Identifiant SMTP",
+        "required": true
+      },
+      {
+        "name": "SMTP_PASS",
+        "description": "Mot de passe SMTP",
+        "required": true
+      },
+      {
+        "name": "RATE_LIMIT_REQUESTS",
+        "description": "Requêtes autorisées par IP",
+        "default": "5"
+      },
+      {
+        "name": "RATE_LIMIT_WINDOW",
+        "description": "Durée de la fenêtre (secondes)",
+        "default": "3600"
+      },
+      {
+        "name": "ALLOWED_ORIGINS",
+        "description": "Origines CORS autorisées",
+        "default": "https://danetudes.ci,http://localhost:3000"
+      },
+      {
+        "name": "LANGUAGES",
+        "description": "Langues supportées",
+        "default": "fr,en"
+      },
+      {
+        "name": "DEFAULT_LANGUAGE",
+        "description": "Langue par défaut",
+        "default": "fr"
+      }
+    ]
+  },
+  "commands": {
+    "npm": {
+      "install": "npm install",
+      "start": "npm start",
+      "dev": "npm run dev",
+      "test": "npm test",
+      "build": "npm run build"
+    }
+  },
+  "security": {
+    "headers": [
+      "X-Content-Type-Options: nosniff",
+      "X-Frame-Options: DENY",
+      "X-XSS-Protection: 1; mode=block",
+      "Referrer-Policy: strict-origin-when-cross-origin",
+      "Access-Control-Allow-Origin: configurable"
+    ],
+    "protected_files": [
+      ".env",
+      ".htaccess",
+      "config.js",
+      "contactHandler.js",
+      "server.js",
+      "package.json",
+      "package-lock.json"
+    ]
+  },
+  "deployment": {
+    "local": {
+      "command": "npm start",
+      "url": "http://localhost:3000",
+      "port": 3000
+    },
+    "production": {
+      "platform": "Namecheap Apache",
+      "documentRoot": "public_html/",
+      "requirements": [
+        "PHP 7.4+ (optionnel)",
+        "Node.js 14+ (optionnel)",
+        "Certificat SSL"
+      ],
+      "documentation": "DEPLOYMENT_NAMECHEAP.md"
+    }
+  },
+  "status": "✅ Production-Ready"
+}

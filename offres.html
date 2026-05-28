@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos offres — DANETUDES</title>
+  <meta name="description" content="Consultez les offres de DANETUDES : parcours de français sur mesure pour expatriés à Abidjan.">
+  <meta property="og:title" content="Nos offres — DANETUDES">
+  <meta property="og:description" content="Consultez les offres de DANETUDES : parcours de français sur mesure pour expatriés à Abidjan.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danetudes.ci/offres.html">
+  <meta property="og:image" content="https://danetudes.ci/assets/images/og-image.webp">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.webp" alt="DANETUDES — Donnons à chacun la chance d'apprendre et de connaître" height="110" width="auto" loading="eager">
+      </a>
+      <div class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+        <a href="services.html" class="nav-link" data-i18n="nav.courses">Nos cours</a>
+        <a href="offres.html" class="nav-link active">Nos offres</a>
+        <a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language" title="Switch language">
+          <span class="lang-pill-bg"></span>
+          <span class="lang-option lang-option-fr"><span class="lang-name">FR</span></span>
+          <span class="lang-option lang-option-en"><span class="lang-name">EN</span></span>
+        </button>
+        <button class="btn btn-whatsapp" data-wa="general" aria-label="WhatsApp" rel="noopener noreferrer">
+          <span data-i18n="nav.whatsapp">WhatsApp</span>
+        </button>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-mobile" id="nav-mobile">
+    <div class="container">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+      <a href="services.html" class="nav-link" data-i18n="nav.courses">Nos cours</a>
+      <a href="offres.html" class="nav-link active">Nos offres</a>
+      <a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a>
+      <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+      <button class="lang-toggle" id="lang-toggle-mobile" aria-label="Switch language" title="Switch language">
+        <span class="lang-pill-bg"></span>
+        <span class="lang-option lang-option-fr"><span class="lang-name">FR</span></span>
+        <span class="lang-option lang-option-en"><span class="lang-name">EN</span></span>
+      </button>
+      <button class="btn btn-whatsapp nav-mobile-wa" data-wa="general" aria-label="WhatsApp">
+        <span data-i18n="nav.whatsapp">WhatsApp</span>
+      </button>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Nos offres actuelles</h1>
+        <p class="hero-sub">Découvrez les parcours de français disponibles dès maintenant, publiés depuis l’administration.</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="services-detail">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">NOS OFFRES</span>
+          <h2 class="section-title">Offres publiées par DANETUDES</h2>
+          <p class="section-sub">Toutes les offres publiées sont affichées ici en temps réel.</p>
+        </div>
+        <div id="public-offers-list" class="services-detail-grid"></div>
+        <div class="services-detail-grid static-fallback">
+          <div class="service-detail-card">
+            <div class="service-header">
+              <div class="service-icon">✨</div>
+              <h2>Aucune offre disponible</h2>
+            </div>
+            <div class="service-content">
+              <p>Nos offres sont en cours de publication. Revenez bientôt ou contactez-nous pour en savoir plus.</p>
+              <div class="service-actions">
+                <a class="btn btn-primary" href="contact.html">Contactez-nous</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Dan Études. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

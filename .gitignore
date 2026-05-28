@@ -1,0 +1,37 @@
+# Environment files
+.env
+.env.local
+.env.production
+
+# Logs
+error.log
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Node modules (if using build tools)
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Package files
+package-lock.json
+yarn.lock

@@ -1,0 +1,96 @@
+/* Styles pour les parcours avec images de fond */
+.hero-filieres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.fil {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fil::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+.fil > * {
+  position: relative;
+  z-index: 2;
+}
+
+.fil:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.fil h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.fil p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Images de fond spécifiques pour chaque parcours */
+.fil-piece {
+  background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');
+}
+
+.fil-integration {
+  background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');
+}
+
+.fil-professionnel {
+  background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');
+}
+
+.fil-familial {
+  background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-filieres {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .fil {
+    min-height: 150px;
+    padding: 1rem;
+  }
+  
+  .fil h4 {
+    font-size: 1.1rem;
+  }
+  
+  .fil p {
+    font-size: 0.85rem;
+  }
+}

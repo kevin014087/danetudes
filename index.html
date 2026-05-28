@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DANETUDES — Français pour expatriés à Abidjan</title>
+  <meta name="description" content="DANETUDES : programme d'apprentissage du français pour faciliter l'intégration sociale et professionnelle des expatriés et de leurs familles à Abidjan, Côte d'Ivoire.">
+  
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="DANETUDES — Français pour expatriés à Abidjan">
+  <meta property="og:description" content="DANETUDES : programme d'apprentissage du français pour faciliter l'intégration sociale et professionnelle des expatriés et de leurs familles à Abidjan, Côte d'Ivoire.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danetudes.ci/">
+  <meta property="og:image" content="https://danetudes.ci/assets/images/og-image.webp">
+  <meta property="og:locale" content="fr_FR">
+  
+  <!-- Twitter Card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DANETUDES — Français pour expatriés à Abidjan">
+  <meta name="twitter:description" content="DANETUDES : programme d'apprentissage du français pour faciliter l'intégration sociale et professionnelle des expatriés et de leurs familles à Abidjan, Côte d'Ivoire.">
+  <meta name="twitter:image" content="https://danetudes.ci/assets/images/og-image.webp">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "DANETUDES",
+    "description": "Programme d'apprentissage du français pour faciliter l'intégration sociale et professionnelle des expatriés et de leurs familles à Abidjan, Côte d'Ivoire",
+    "url": "https://danetudes.ci",
+    "logo": "https://danetudes.ci/assets/images/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+22589767600",
+      "contactType": "customer service"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Abidjan",
+      "addressCountry": "Côte d'Ivoire"
+    },
+    "sameAs": [
+      "https://wa.me/22589767600",
+      "https://www.facebook.com/share/18UuEAVzGV/",
+      "https://www.linkedin.com/in/daniel-kouassi-30a285379",
+      "https://www.instagram.com/danetudes"
+    ]
+  }
+  </script>
+  
+  <!-- SEO hreflang tags -->
+  <link rel="alternate" hreflang="fr" href="https://danetudes.ci/">
+  <link rel="alternate" hreflang="en" href="https://danetudes.ci/">
+  <link rel="alternate" hreflang="x-default" href="https://danetudes.ci/">
+  
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/parcours.css">
+  <link rel="stylesheet" href="assets/css/testimonials.css">
+  <link rel="stylesheet" href="assets/css/resources.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <!-- Preload critical image -->
+  <link rel="preload" as="image" href="assets/images/slide-1.jpg" type="image/jpeg">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.webp" alt="DANETUDES — Donnons à chacun la chance d'apprendre et de connaître" height="110" width="auto" loading="eager">
+      </a>
+      
+      <div class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link active" data-i18n="nav.home">Accueil</a>
+        <a href="services.html" class="nav-link" data-i18n="nav.courses">Nos cours</a>
+        <a href="offres.html" class="nav-link">Nos offres</a>
+        <a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </div>
+      
+      <div class="nav-actions">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language" title="Switch language">
+          <span class="lang-pill-bg"></span>
+          <span class="lang-option lang-option-fr">
+            <span class="lang-name">FR</span>
+          </span>
+          <span class="lang-option lang-option-en">
+            <span class="lang-name">EN</span>
+          </span>
+        </button>
+        
+        <button class="btn btn-whatsapp" data-wa="general" aria-label="WhatsApp" rel="noopener noreferrer">
+          <span data-i18n="nav.whatsapp">WhatsApp</span>
+        </button>
+      </div>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile" id="nav-mobile">
+    <div class="container">
+      <a href="index.html" class="nav-link active" data-i18n="nav.home">Accueil</a>
+      <a href="services.html" class="nav-link" data-i18n="nav.courses">Nos cours</a>
+      <a href="offres.html" class="nav-link">Nos offres</a>
+      <a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a>
+      <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+      <button class="lang-toggle lang-toggle-mobile" id="lang-toggle-mobile" aria-label="Switch language" title="Switch language">
+        <span class="lang-pill-bg"></span>
+        <span class="lang-option lang-option-fr">
+          <span class="lang-name">FR</span>
+        </span>
+        <span class="lang-option lang-option-en">
+          <span class="lang-name">EN</span>
+        </span>
+      </button>
+      
+      <button class="btn btn-whatsapp nav-mobile-wa" data-wa="general" aria-label="WhatsApp" rel="noopener noreferrer">
+        <span data-i18n="nav.whatsapp">WhatsApp</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <section class="carousel">
+    <div class="carousel-container">
+      <div class="carousel-track" id="carousel-track">
+        <div class="carousel-slide active">
+          <img src="assets/images/slide-1.jpg" alt="Learn from home" loading="lazy" width="800" height="400" fetchpriority="high">
+          <div class="carousel-caption">
+            <span class="c-tag" data-i18n="slide1.tag">PREMIUM LEARNING</span>
+            <h2 class="c-title" data-i18n="slide1.title">Learn From The Comfort Of Your Home</h2>
+            <p class="c-sub" data-i18n="slide1.sub">You will master French without leaving your home with our personalized online approach.</p>
+          </div>
+        </div>
+        
+        <div class="carousel-slide">
+          <img src="assets/images/slide-2.jpg" alt="Family happiness program" loading="lazy" width="800" height="400">
+          <div class="carousel-caption">
+            <span class="c-tag" data-i18n="slide2.tag">FAMILY FOCUSED</span>
+            <h2 class="c-title" data-i18n="slide2.title">Your Family's Happiness In Abidjan</h2>
+            <p class="c-sub" data-i18n="slide2.sub">A French learning program designed specifically for the happiness and success of your entire family.</p>
+          </div>
+        </div>
+        
+        <div class="carousel-slide">
+          <img src="assets/images/slide-3.jpg" alt="Celebrate achievements" loading="lazy" width="800" height="400">
+          <div class="carousel-caption">
+            <span class="c-tag" data-i18n="slide3.tag">ACHIEVEMENT DRIVEN</span>
+            <h2 class="c-title" data-i18n="slide3.title">Celebrate Your First Victories</h2>
+            <p class="c-sub" data-i18n="slide3.sub">We will celebrate your first victories together and mark every milestone of your French journey.</p>
+          </div>
+        </div>
+        
+        <div class="carousel-slide">
+          <img src="assets/images/slide-4.jpg" alt="Real-world immersion" loading="lazy" width="800" height="400">
+          <div class="carousel-caption">
+            <span class="c-tag" data-i18n="slide4.tag">REAL IMMERSION</span>
+            <h2 class="c-title" data-i18n="slide4.title">Learn In Real-Life Situations</h2>
+            <p class="c-sub" data-i18n="slide4.sub">Discovery outings to master French expression in authentic real-world scenarios and daily interactions.</p>
+          </div>
+        </div>
+        
+        <div class="carousel-slide">
+          <img src="assets/images/slide-5.jpg" alt="Personalized experience" loading="lazy" width="800" height="400">
+          <div class="carousel-caption">
+            <span class="c-tag" data-i18n="slide5.tag">BESPOKE EXPERIENCE</span>
+            <h2 class="c-title" data-i18n="slide5.title">Your Unique Learning Journey</h2>
+            <p class="c-sub" data-i18n="slide5.sub">We create a special and personalized learning path to make your French learning experience truly exceptional.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-nav">
+        <button class="carousel-btn prev" id="carousel-prev" aria-label="Previous slide">‹</button>
+        <button class="carousel-btn next" id="carousel-next" aria-label="Next slide">›</button>
+      </div>
+      
+      <div class="carousel-dots" id="carousel-dots"></div>
+      
+      <div class="carousel-progress" id="carousel-progress"></div>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-eyebrow" data-i18n="hero.eyebrow">Service actif — Abidjan, Côte d'Ivoire</p>
+        <h1 class="hero-title" data-i18n="hero.h1">
+          Intégrez-vous.<br>Communiquez.<br><em>Réussissez.</em>
+        </h1>
+        <p class="hero-sub" data-i18n="hero.sub">
+          DANETUDES : programme d'apprentissage du français conçu pour faciliter l'intégration sociale et professionnelle des expatriés et de leurs familles à Abidjan.
+        </p>
+        <div class="hero-actions">
+          <a href="services.html" class="btn btn-primary" data-i18n="hero.cta1">Découvrir nos parcours →</a>
+          <button class="btn btn-secondary" data-wa="general" data-i18n="hero.cta2">💬 Contacter sur WhatsApp</button>
+        </div>
+      </div>
+      
+      <div class="hero-card">
+        <h3 class="hero-card-title" data-i18n="hero.card.title">NOS PARCOURS</h3>
+        <div class="hero-filieres">
+          <div class="fil fil-piece">
+            <h4 data-i18n="hero.fil1.name">Parcours "En pice"</h4>
+            <p data-i18n="hero.fil1.sub">Séances personnalisées</p>
+          </div>
+          <div class="fil fil-integration">
+            <h4 data-i18n="hero.fil2.name">Intégration Rapide</h4>
+            <p data-i18n="hero.fil2.sub">Immersion accélérée</p>
+          </div>
+          <div class="fil fil-professionnel">
+            <h4 data-i18n="hero.fil3.name">Français Professionnel</h4>
+            <p data-i18n="hero.fil3.sub">Contexte business</p>
+          </div>
+          <div class="fil fil-familial">
+            <h4 data-i18n="hero.fil4.name">Accompagnement Familial</h4>
+            <p data-i18n="hero.fil4.sub">Pour toute la famille</p>
+          </div>
+        </div>
+        <div class="hero-tarif">
+          <p data-i18n="hero.notarif">Tarif personnalisé</p>
+          <p data-i18n="hero.devis">Proposition après entretien offert</p>
+          <button class="btn btn-outline" data-wa="devis" data-i18n="hero.devis.btn">💬 Planifier entretien</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <span class="trust-icon">👤</span>
+          <span data-i18n="trust.1">Accompagnement personnalisé</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">💬</span>
+          <span data-i18n="trust.2">Réservation via WhatsApp</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">📈</span>
+          <span data-i18n="trust.3">Résultats mesurables</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">⏱</span>
+          <span data-i18n="trust.4">Horaires flexibles</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">📍</span>
+          <span data-i18n="trust.5">Abidjan, Côte d'Ivoire</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="services.tag">NOS COURS</span>
+        <h2 class="section-title" data-i18n="services.title">Des programmes pour chaque profil</h2>
+        <p class="section-sub" data-i18n="services.sub">
+          Du primaire au lycée, pour les adultes et les étrangers — chaque apprenant bénéficie d'un suivi sur mesure.
+        </p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">📚</div>
+          <h3 data-i18n="s1.title">Renforcement scolaire</h3>
+          <p data-i18n="s1.sub">
+            Du CP à la Terminale — rattrapage, révisions ciblées et préparation aux examens nationaux.
+          </p>
+          <div class="service-actions">
+            <button class="btn btn-outline" data-wa="primaire" data-i18n="s1.wa">💬 Réserver ce cours</button>
+
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">✏️</div>
+          <h3 data-i18n="s2.title">Alphabétisation adultes</h3>
+          <p data-i18n="s2.sub">
+            Apprenez à lire, écrire et calculer à votre rythme. Cours disponibles le soir et le weekend.
+          </p>
+          <div class="service-actions">
+            <button class="btn btn-outline" data-wa="adulte" data-i18n="s2.wa">💬 Réserver ce cours</button>
+
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🌍</div>
+          <h3 data-i18n="s3.title">Français langue étrangère</h3>
+          <p data-i18n="s3.sub">
+            Pour expatriés et immigrants, du niveau A1 au B2.
+          </p>
+          <div class="service-actions">
+            <button class="btn btn-outline" data-wa="fle" data-i18n="s3.wa">💬 Réserver ce cours</button>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-footer">
+        <a href="services.html" class="btn btn-secondary" data-i18n="services.all">Voir tous nos programmes →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="200">0</div>
+          <div class="stat-label" data-i18n="stat1.label">Apprenants formés</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="5">0</div>
+          <div class="stat-label" data-i18n="stat2.label">D'expérience pédagogique</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label" data-i18n="stat3.label">Filières disponibles</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="98">0</div>
+          <div class="stat-label" data-i18n="stat4.label">Taux de satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="process.tag">COMMENT ÇA MARCHE</span>
+        <h2 class="section-title" data-i18n="process.title">Commencez en 4 étapes simples</h2>
+        <p class="section-sub" data-i18n="process.sub">
+          Pas de tarif fixe — chaque profil est analysé individuellement.
+        </p>
+      </div>
+      
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3 data-i18n="step1.title">Contactez-nous sur WhatsApp</h3>
+          <p data-i18n="step1.text">
+            Dites-nous qui vous êtes et ce que vous cherchez. Réponse sous 24h garantie.
+          </p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3 data-i18n="step2.title">Analyse gratuite de votre profil</h3>
+          <p data-i18n="step2.text">
+            Niveau actuel, matières, disponibilités et objectifs personnels.
+          </p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3 data-i18n="step3.title">Réception du devis & paiement en ligne</h3>
+          <p data-i18n="step3.text">
+            Un tarif personnalisé vous est envoyé via WhatsApp. Réglez en ligne via Clapay.
+          </p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3 data-i18n="step4.title">Début de votre parcours</h3>
+          <p data-i18n="step4.text">
+            Vos cours démarrent selon votre emploi du temps.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="results">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="results.tag">RÉSULTATS CONCRETS</span>
+        <h2 class="section-title" data-i18n="results.title">Des progrès mesurables, pas des promesses</h2>
+      </div>
+      
+      <div class="results-grid">
+        <div class="result-item">
+          <div class="result-number" data-i18n="r1.num">87%</div>
+          <h3 data-i18n="r1.title">des élèves améliorent leurs notes</h3>
+          <p data-i18n="r1.text">En moyenne dès le premier trimestre de suivi.</p>
+        </div>
+        
+        <div class="result-item">
+          <div class="result-number" data-i18n="r2.num">9 sur 10</div>
+          <h3 data-i18n="r2.title">obtiennent leur examen (BEPC / BAC)</h3>
+          <p data-i18n="r2.text">Parmi les élèves préparés avec notre accompagnement intensif.</p>
+        </div>
+        
+        <div class="result-item">
+          <div class="result-number" data-i18n="r3.num">3 mois</div>
+          <h3 data-i18n="r3.title">pour passer de A1 à B1 en français</h3>
+          <p data-i18n="r3.text">Nos apprenants FLE en programme intensif progressent de deux niveaux CECRL.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="faq.tag">QUESTIONS FRÉQUENTES</span>
+        <h2 class="section-title" data-i18n="faq.title">Ce que les parents demandent souvent</h2>
+      </div>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq1.q">Mon enfant est très en retard — vous pouvez quand même l'aider ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq1.a">
+              Oui — c'est justement notre spécialité. Nous partons de là où il en est, pas de là où il devrait être.
+            </p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq2.q">Combien ça coûte exactement ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq2.a">
+              Nous ne pratiquons pas de tarif fixe. Contactez-nous sur WhatsApp — devis clair sous 24h, sans engagement.
+            </p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq3.q">Vous vous déplacez ou il faut venir chez vous ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq3.a">
+              Les deux sont possibles selon votre commune. Précisez-le lors de votre premier message WhatsApp.
+            </p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq4.q">Comment annuler ou modifier un cours sans complication ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq4.a">
+              Un simple message WhatsApp suffit. Pas de formulaire, pas d'e-mail.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-footer">
+        <a href="contact.html" class="btn btn-secondary" data-i18n="faq.more">Voir toutes les questions →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section class="testimonials-section">
+    <div class="testimonials-header">
+      <h2 data-i18n="testi.head.h2">Ils ont réussi leur intégration avec DANETUDES</h2>
+      <p data-i18n="testi.head.p">Découvrez les parcours de nos expatriés qui ont transformé leur vie à Abidjan grâce à nos cours de français</p>
+    </div>
+    
+    <div class="testimonials-grid">
+      <!-- Témoignage 1 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Marie Dubois" class="testimonial-avatar">
+          <div class="testimonial-info">
+            <h4 data-i18n="t1.name">Marie Dubois</h4>
+            <div class="testimonial-role" data-i18n="t1.role">Consultante française</div>
+            <div class="testimonial-duration" data-i18n="t1.duration">Parcours : 3 mois</div>
+          </div>
+        </div>
+        
+        <div class="testimonial-rating">
+          <span class="star"> </span>
+          <span class="star"> </span>
+          <span class="star"> </span>
+          <span class="star"> </span>
+          <span class="star"> </span>
+        </div>
+        
+        <div class="testimonial-content">
+          <p class="testimonial-text" data-i18n="t1.text">"Arrivée à Abidjan sans parler un mot de français, DANETUDES m'a permis de devenir autonome en seulement 3 mois. Aujourd'hui je gère des projets en français !"</p>
+          
+          <div class="testimonial-progress">
+            <div class="progress-header">
+              <span class="progress-title" data-i18n="t1.prog_title">Niveau de français</span>
+              <span class="progress-level" data-i18n="t1.prog_level">A1 vers B2</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 85%"></div>
+            </div>
+          </div>
+          
+          <div class="testimonial-meta">
+            <span class="testimonial-date" data-i18n="t1.date">Il y a 2 mois</span>
+            <div class="testimonial-verified">
+              <div class="verified-icon"> </div>
+              <span data-i18n="testi.verified">Vérifié</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Témoignage 2 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="John Smith" class="testimonial-avatar">
+          <div class="testimonial-info">
+            <h4 data-i18n="t2.name">John Smith</h4>
+            <div class="testimonial-role" data-i18n="t2.role">Directeur américain</div>
+            <div class="testimonial-duration" data-i18n="t2.duration">Parcours : 6 mois</div>
+          </div>
+        </div>
+        
+        <div class="testimonial-rating">
+          <span class="star"> </span>
+          <span class="star"> </span>
+          <span class="star"> </span>
+          <span class="star"> </span>
+          <span class="star"> </span>
+        </div>
+        
+        <div class="testimonial-content">
+          <p class="testimonial-text" data-i18n="t2.text">"Les cours professionnels de DANETUDES ont transformé ma carrière. Je peux maintenant négocier des contrats et diriger des réunions en français."</p>
+          
+          <div class="testimonial-progress">
+            <div class="progress-header">
+              <span class="progress-title" data-i18n="t2.prog_title">Français des affaires</span>
+              <span class="progress-level" data-i18n="t2.prog_level">Débutant vers Avancé</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 90%"></div>
+            </div>
+          </div>
+          
+          <div class="testimonial-meta">
+            <span class="testimonial-date" data-i18n="t2.date">Il y a 1 mois</span>
+            <div class="testimonial-verified">
+              <div class="verified-icon"> </div>
+              <span data-i18n="testi.verified">Vérifié</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Témoignage 3 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Li Wei" class="testimonial-avatar">
+          <div class="testimonial-info">
+            <h4 data-i18n="t3.name">Li Wei</h4>
+            <div class="testimonial-role" data-i18n="t3.role">Ingénieure chinoise</div>
+            <div class="testimonial-duration" data-i18n="t3.duration">Parcours : 4 mois</div>
+          </div>
+        </div>
+        
+        <div class="testimonial-rating">
+          <span class="star"> </span>
+          <span class="star"> </span>
+          <span class="star"> </span>
+          <span class="star"> </span>
+          <span class="star empty"> </span>
+        </div>
+        
+        <div class="testimonial-content">
+          <p class="testimonial-text" data-i18n="t3.text">"Le pack familial a permis à toute ma famille de s'intégrer. Mes enfants adorent les cours culturels et moi je peux maintenant communiquer avec mes collègues ivoiriens."</p>
+          
+          <div class="testimonial-progress">
+            <div class="progress-header">
+              <span class="progress-title" data-i18n="t3.prog_title">Intégration familiale</span>
+              <span class="progress-level" data-i18n="t3.prog_level">A2 vers B1</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 75%"></div>
+            </div>
+          </div>
+          
+          <div class="testimonial-meta">
+            <span class="testimonial-date" data-i18n="t3.date">Il y a 3 semaines</span>
+            <div class="testimonial-verified">
+              <div class="verified-icon"> </div>
+              <span data-i18n="testi.verified">Vérifié</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz Section -->
+  <section class="resources-section" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);">
+    <div class="resources-header">
+      <h2 data-i18n="quiz.h2">Évaluez votre niveau de français</h2>
+      <p data-i18n="quiz.p">Découvrez votre niveau et le parcours idéal pour vous en 5 questions</p>
+    </div>
+    
+    <div class="quiz-section" style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); max-width: 800px; margin: 0 auto;">
+      <div class="quiz-container">
+        <div class="quiz-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill" style="width: 20%"></div>
+          </div>
+          <div class="progress-text">
+            <span data-i18n="quiz.q.title">Question</span> <span id="current-question">1</span> <span data-i18n="quiz.q.sur">sur</span> <span id="total-questions">5</span>
+          </div>
+        </div>
+        
+        <div class="quiz-question" id="quiz-question">
+          <!-- Populated dynamically by javascript placement test -->
+        </div>
+        
+        <div class="quiz-actions">
+          <button class="btn-quiz" id="next-btn" onclick="nextQuestion()" disabled data-i18n="quiz.next">Question suivante</button>
+          <button class="btn-secondary-quiz" onclick="restartQuiz()" data-i18n="quiz.restart">Recommencer</button>
+        </div>
+      </div>
+      
+      <div class="quiz-result" id="quiz-result" style="display: none;">
+        <div class="result-score" id="result-score"></div>
+        <div class="result-level" id="result-level"></div>
+        <div class="result-description" id="result-description"></div>
+        
+        <div class="result-recommendation">
+          <h4 data-i18n="quiz.res.rec.title">Parcours recommandé</h4>
+          <p id="result-recommendation"></p>
+        </div>
+        
+        <div class="quiz-actions">
+          <button class="btn-quiz" onclick="restartQuiz()" data-i18n="quiz.res.btn.redo">Refaire le quiz</button>
+          <button class="btn-download" href="#">
+            <span data-i18n="quiz.res.btn.book">Réserver un cours</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2 data-i18n="cta.title">Prêt à commencer votre parcours ?</h2>
+        <p data-i18n="cta.sub">Contactez-nous sur WhatsApp — réponse garantie sous 24h.</p>
+        <div class="cta-actions">
+          <button class="btn btn-primary" data-wa="general" data-i18n="cta.wa">💬 Contacter sur WhatsApp</button>
+          <button class="btn btn-secondary" data-clapay data-i18n="cta.pay">💳 Payer via Clapay</button>
+          <a href="contact.html" class="btn btn-outline" data-i18n="cta.write">Nous écrire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/images/logo.webp" alt="DANETUDES" height="32" width="auto" loading="lazy" style="margin-bottom:0.75rem;">
+          <p data-i18n="footer.tagline">
+            Programme d'apprentissage du français pour faciliter l'intégration des expatriés et de leurs familles à Abidjan, Côte d'Ivoire.
+          </p>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-i18n="footer.pages">PAGES</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="services.html" data-i18n="nav.courses">Nos cours</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-i18n="footer.info">INFOS</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.privacy">Politique de confidentialité</a></li>
+            <li><a href="about.html#team" data-i18n="footer.team">Notre équipe</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact">CONTACT</h4>
+          <ul>
+            <li><a href="tel:+22589767600">+225 89 76 76 00</a></li>
+            <li><a href="mailto:dkouassi0805@gmail.com">dkouassi0805@gmail.com</a></li>
+            <li>Abidjan, Côte d'Ivoire</li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>SUIVEZ-NOUS</h4>
+          <div class="social-links">
+            <a href="https://wa.me/22589767600" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.81 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-.31.08-1.26.33.33-1.22.09-.32-.19-.31a8.188 8.188 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24h.01zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.12.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.12-.08.14-.23.25-.34.11-.12.27-.35.37-.52.13-.2.07-.37-.03-.56-.1-.19-.45-1.06-.62-1.45-.17-.39-.34-.32-.45-.33-.11 0-.24-.01-.37-.01z"/>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://www.facebook.com/share/18UuEAVzGV/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-kouassi-30a285379" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/danetudes" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">© 2026 DANETUDES — Daniel Kouassi. Tous droits réservés.</p>
+        
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <button class="whatsapp-float" data-wa="general" aria-label="WhatsApp">
+    <span>💬</span>
+  </button>
+
+
+
+  <!-- Scripts -->
+  <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+<script src="assets/js/clapay-once.js" defer></script>
+  <script src="assets/js/quiz.js" defer></script>
+</body>
+</html>
