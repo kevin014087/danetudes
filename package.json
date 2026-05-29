@@ -1,14 +1,23 @@
 {
   "name": "danetudes",
-  "version": "3.0.0",
-  "description": "DANETUDES - Site statique HTML/CSS/JavaScript pur",
+  "version": "3.1.0",
+  "description": "DANETUDES - Site statique optimisé pour Vercel (HTML/CSS/JavaScript)",
   "private": true,
   "author": "DANETUDES",
   "license": "PROPRIETARY",
   "scripts": {
-    "start": "echo 'Site statique prêt à être déployé sur Render'",
-    "test": "echo 'No tests configured'"
+    "start": "echo 'Site statique prêt pour Vercel'",
+    "test": "echo 'Static site - no tests required'",
+    "build": "echo 'Vercel handles the build automatically'"
   },
+  "keywords": [
+    "danetudes",
+    "french",
+    "education",
+    "abidjan",
+    "expatriates"
+  ],
   "dependencies": {},
   "devDependencies": {}
 }
+

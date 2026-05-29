@@ -1,0 +1,24 @@
+# Vercel Redirects for DANETUDES
+
+# Security: Protect sensitive files
+/server.js 404
+/contactHandler.js 404
+/config.js 404
+/build.js 404
+/test.js 404
+/.env 404
+/.env.* 404
+/package.json 404
+/package-lock.json 404
+/.git 404
+/.gitignore 404
+/node_modules/* 404
+
+# Asset caching rules
+/assets/* 200
+
+# HTML pages
+/*.html 200
+
+# Default redirects
+/* /index.html 200

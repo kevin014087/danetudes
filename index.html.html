@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DANETUDES — Français pour expatriés à Abidjan</title>
   <meta name="description" content="DANETUDES : programme d'apprentissage du français pour faciliter l'intégration sociale et professionnelle des expatriés et de leurs familles à Abidjan, Côte d'Ivoire.">
+  <link rel="icon" type="image/webp" href="assets/images/logo.webp">
+  <link rel="shortcut icon" type="image/webp" href="assets/images/logo.webp">
   
   <!-- Open Graph tags -->
   <meta property="og:title" content="DANETUDES — Français pour expatriés à Abidjan">
@@ -53,20 +55,26 @@
   <link rel="alternate" hreflang="en" href="https://danetudes.ci/">
   <link rel="alternate" hreflang="x-default" href="https://danetudes.ci/">
   
-  <!-- Preconnect for Google Fonts -->
+  <!-- Preconnect for Google Fonts with font-display=swap optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- CSS -->
+  <!-- CSS - Critical first, then defer others -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/parcours.css">
-  <link rel="stylesheet" href="assets/css/testimonials.css">
-  <link rel="stylesheet" href="assets/css/resources.css">
   <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/parcours.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/testimonials.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/resources.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/planning.css" media="print" onload="this.media='all'">
   
-  <!-- Preload critical image -->
-  <link rel="preload" as="image" href="assets/images/slide-1.jpg" type="image/jpeg">
+  <!-- Preload critical font to prevent FOUT -->
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/plusjakartasans/v8/LYjM-G5wKj9SQXGzfGvSEf8-WM3Ew6YTfJPZ8_4-XVQB.woff2" type="font/woff2" crossorigin>
+  
+  <!-- Preload critical image with responsive sizing -->
+  <link rel="preload" as="image" href="assets/images/slide-1.jpg" type="image/jpeg" imagesrcset="assets/images/slide-1-sm.jpg 480w, assets/images/slide-1.jpg 1200w" imagesizes="(max-width: 768px) 100vw, 100vw">
 </head>
 <body>
   <!-- Navbar -->

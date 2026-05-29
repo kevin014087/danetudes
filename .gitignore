@@ -2,10 +2,18 @@
 .env
 .env.local
 .env.production
+.env.*.local
+
+# Vercel deployment
+.vercel
+.vercel/
 
 # Logs
 error.log
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # OS files
 .DS_Store
@@ -13,25 +21,39 @@ Thumbs.db
 *.swp
 *.swo
 *~
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 
 # IDE
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
+*.code-workspace
 
 # Temporary files
 *.tmp
 *.temp
 .cache/
+*.bak
 
-# Node modules (if using build tools)
+# Node modules (if needed for build tools)
 node_modules/
 
 # Build outputs
 dist/
 build/
+out/
 
 # Package files
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
+
+# OS specific
+.AppleDouble
+.LSOverride
+
