@@ -1726,6 +1726,61 @@ button[data-wa]:active,
   background: var(--white);
 }
 
+/* Fix WhatsApp button overflow on small screens and add ripple effect styling */
+@media (max-width: 768px) {
+  .navbar .container {
+    height: 90px;
+    align-items: center;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  /* Hide desktop WhatsApp/lang controls in header on small screens (mobile menu contains them) */
+  .nav-actions .btn-whatsapp {
+    display: none;
+  }
+
+  .nav-actions .lang-toggle {
+    display: none;
+  }
+
+  /* Mobile menu WhatsApp button sizing */
+  .nav-mobile .btn-whatsapp,
+  .nav-mobile .nav-mobile-wa {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: var(--text-sm);
+    border-radius: var(--radius-md);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.18);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}
+
+/* Ripple effect element */
+.ripple {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  animation: ripple 600ms ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(20);
+    opacity: 0;
+  }
+}
+
 .story-content {
   max-width: 800px;
   margin: 0 auto;

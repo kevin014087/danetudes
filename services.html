@@ -338,5 +338,26 @@
   <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/clapay-once.js" defer></script>
+  <script>
+  (function(){
+    function attachRipple(btn){
+      btn.addEventListener('click', function(e){
+        var rect = btn.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var span = document.createElement('span');
+        span.className = 'ripple';
+        span.style.left = x + 'px';
+        span.style.top = y + 'px';
+        btn.appendChild(span);
+        setTimeout(function(){ span.remove(); }, 700);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      var buttons = document.querySelectorAll('button[data-wa], .btn-whatsapp');
+      buttons.forEach(function(b){ attachRipple(b); });
+    });
+  })();
+  </script>
 </body>
 </html>
